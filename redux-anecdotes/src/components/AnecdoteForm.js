@@ -8,18 +8,16 @@ const NewAnecdote = (props) => {
   //console.log(createAnecdote) //this is an action creator
   //console.log(props.createAnecdote) //function formed by connect, incl. dispatch
 
-
   const addAnecdote = async (event) => {
     event.preventDefault()
-    //const content = event.target.content.value
+    const anecdote = event.target.content.value
     event.target.content.value = ''
-    const newAnecdote = await anecdoteService.createNew(event.target.content.value)
-    props.createAnecdote(newAnecdote)
+    // const newAnecdote = await anecdoteService.createNew(anecdote)
+    props.createAnecdote(anecdote)
     
-    props.messageChange('You added anecdote "' + event.target.content.value + '"')
-    console.log('You added anecdote "' + event.target.content.value + '"')
-
-
+    props.messageChange('You added anecdote "' + anecdote + '"')
+    console.log('You added anecdote "' + anecdote + '"')
+    
     setTimeout(() => {
       props.messageChange('')
     }, 3000)

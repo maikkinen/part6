@@ -1,4 +1,5 @@
 import anecdotes from "../services/anecdotes"
+import anecdoteService from '../services/anecdotes'
 
 const anecdotesAtStart = [
   //notes: [ anek here], filter: 'IMPORTANT,
@@ -21,26 +22,34 @@ const asObject = (anecdote) => { //As we've got no backend in part 6.
 }
 
 export const voteUp = (anecdote) => {
-  const votedAnec = { ...anecdote, votes: anecdote.votes + 1 }
-  return {
-    type: 'VOTE-UP',
-    data: votedAnec,
+  return async dispatch => {
+    const votedAnec = { ...anecdote, votes: anecdote.votes + 1 }
+    const NvotedAnec = await anecdoteService.vote(votedAnec)
+    dispatch({
+      type: 'VOTE-UP',
+      data: NvotedAnec,
+    })
   }
 }
 
-export const createAnecdote = (content) => {
-  return {
-    type: 'CREATE-NEW',
-    data: {
-      content
-    }
-   }
+export const createAnecdote = content => {
+  console.log(content)
+  return async dispatch => {
+    const newAnecdote = await anecdoteService.createNew(content)
+    dispatch({
+      type: 'CREATE-NEW',
+      data: newAnecdote,
+    })
+  }
 }
 
-export const initializeAnecdotes = (anecdotes) => {
-  return {
-    type: 'INIT_NOTES',
-    data: anecdotes,
+export const initializeAnecdotes = () => {
+  return async dispatch => {
+    const anecdotes = await anecdoteService.getAll()
+    dispatch({
+      type: 'INIT_NOTES',
+      data: anecdotes,
+    })
   }
 }
 
