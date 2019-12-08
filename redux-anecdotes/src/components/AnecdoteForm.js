@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { createAnecdote } from '../reducers/anecdoteReducer'
 import { messageChange } from '../reducers/notificationReducer'
-import anecdoteService from '../services/anecdotes'
 
 const NewAnecdote = (props) => {
   //console.log(createAnecdote) //this is an action creator
@@ -15,12 +14,10 @@ const NewAnecdote = (props) => {
     // const newAnecdote = await anecdoteService.createNew(anecdote)
     props.createAnecdote(anecdote)
     
-    props.messageChange('You added anecdote "' + anecdote + '"')
-    console.log('You added anecdote "' + anecdote + '"')
-    
-    setTimeout(() => {
-      props.messageChange('')
-    }, 3000)
+    //Goals:
+    //props.setNotification(`you voted '${anecdote.content}'`, 10)
+    props.messageChange(`You added anecdote '${anecdote.content}'`, 10)
+    //console.log(`You added anecdote '${anecdote.content}'`)
   }
 
   return (

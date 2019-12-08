@@ -1,4 +1,3 @@
-import anecdotes from "../services/anecdotes"
 import anecdoteService from '../services/anecdotes'
 
 const anecdotesAtStart = [
@@ -59,7 +58,6 @@ export const initializeAnecdotes = () => {
  */
 
 //This thing takes care of the anecdotes: showing the list, voting up and creating new ones.
-const initialState = anecdotesAtStart.map(asObject)
 
 const anecdoteReducer = (state = [], action) => {
   switch (action.type) {

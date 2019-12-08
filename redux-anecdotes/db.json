@@ -3,22 +3,22 @@
     {
       "content": "Completing a task for the first time takes 16 hours, second time it takes 8, and third time it takes barely 4 hours",
       "id": "90012",
-      "votes": 2
+      "votes": 19
     },
     {
       "content": "If it hurts, consider doing it differently.",
       "id": "47145",
-      "votes": 0
+      "votes": 3
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
       "id": "21149",
-      "votes": 0
+      "votes": 2
     },
     {
       "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
       "id": "69581",
-      "votes": 0
+      "votes": 3
     },
     {
       "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
@@ -249,6 +249,36 @@
       "content": "Vim is amazing yet oldschool",
       "votes": 0,
       "id": "Ewmqm8c"
+    },
+    {
+      "content": "\"Diodi\", he said",
+      "votes": 0,
+      "id": "UEYNcTS"
+    },
+    {
+      "content": "Yellow is the new Black",
+      "votes": 0,
+      "id": "GpYNssH"
+    },
+    {
+      "content": "Red is the new blue",
+      "votes": 0,
+      "id": "pFp1fwA"
+    },
+    {
+      "content": "Green is the new purple",
+      "votes": 0,
+      "id": "_Oa__s2"
+    },
+    {
+      "content": "Object object is always a bad sign",
+      "votes": 0,
+      "id": "csZ9rmc"
+    },
+    {
+      "content": "Object object is a clear sign tho",
+      "votes": 0,
+      "id": "ONwYXet"
     }
   ]
 }

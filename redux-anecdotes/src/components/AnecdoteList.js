@@ -15,11 +15,10 @@ const Anecdotes = (props) => {
      * sellaiseen muotoon, joka sisältää dispatchauksen.
      */
 
-    props.messageChange('You voted for "' + anecdote.content + '"')
+    //Goals:
+    //props.setNotification(`you voted '${anecdote.content}'`, 10)
 
-    setTimeout(() => {
-      props.messageChange('')
-    }, 3000)
+    props.messageChange(`You voted for '${anecdote.content}'`, 3)
 
   }
 
